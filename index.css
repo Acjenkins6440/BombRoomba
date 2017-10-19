@@ -1,0 +1,143 @@
+@mixin noselect(){
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+$flagPic: "https://d30y9cdsu7xlg0.cloudfront.net/png/1665-200.png";
+body{
+  background-image:url('https://www.hdwallpapers.in/walls/windows_xp_bliss-wide.jpg');
+  background-size:cover;
+  z-index:-10;
+}
+.board{
+  height: 300px;
+  width: 248px;
+  margin: 0 auto;
+  position: relative;
+  border: 4px double blue;
+  border-top-right-radius:6px;
+  border-top-left-radius:6px;
+  .navbar{
+    background-color:blue;
+    color:white;
+    padding:2px;
+    @include noselect();
+    button{
+      color:white;
+      height:18px;
+      width:18px;
+      padding:0px;
+      float:right;
+      margin-right:6px;
+      font-family: 'Bubblegum Sans', cursive;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:12px;
+      border:2px white solid;
+    }
+    #i{
+      background-color:blue;
+      border-radius:100%;
+    }
+    #X{
+      background-color:red;
+    }
+  }
+  .scorebar{
+    background-color:grey;
+    height:30px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    div{
+      position:relative;
+      float:left;
+      flex:1;
+      height:26px !important;
+      font-family: Orbitron;
+      width:26px !important;
+      color:red;
+      text-align:center;
+
+    }
+    .score{
+      float:left;
+      background-color:black;
+      margin-left:10px;
+      border:2px inset grey;
+    }
+    .timer{
+      float:right;
+      flex:1;
+      background-color:black;
+      margin-right:10px;
+      border:2px inset grey;
+
+    }
+    .face{
+      float:left;
+      flex:2;
+      color:black;
+
+    }
+  }
+  .container{
+    width:235px;
+    height:235px;
+    margin: 0 auto;
+    bottom:0;
+    position:absolute;
+    margin-bottom:-2px;
+    .flag{
+      background-image: url(#{$flagPic})
+    }
+    .bmb{}
+    .box{
+      border:4px outset grey;
+      width:20px;
+      height:20px;
+      margin:0px;
+      padding:0px;
+      display:block;
+      position:relative;
+      float:left;
+      background-color:grey;
+      background-size: contain;
+    }
+  }
+}
+.selector{
+  width:470px;
+  height:380px;
+  background-color:rgba(128,128,128, 0.9);
+  position:absoulute;
+  margin:0 auto;
+  h1{
+    text-align:center;
+    @include noselect();
+    cursor: default;
+  }
+  div{
+    text-align:center;
+    button{
+      width:235px;
+      margin: 0 auto;
+      margin-top:5px;
+      h4{
+        margin-top:-10px;
+      }
+    }
+  }
+}
+.b1{color:blue}
+.b2{color:green}
+.b3{color:red}
+.b4{color:darkblue}
+.b5{color:maroon}
+.b6{color:cyan}
+.b7{color:black}
+.b8{color:silver}

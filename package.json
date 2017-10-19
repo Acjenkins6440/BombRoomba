@@ -1,0 +1,28 @@
+{
+  "name": "bombroomba",
+  "version": "1.0.0",
+  "description": "minesweeper clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acjenkins6440/BombRoomba/"
+  },
+  "keywords": [
+    "minesweeper"
+  ],
+  "author": "Alex Jenkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Acjenkins6440/BpmbRoomba/issues"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "google-fonts": "^1.0.0",
+    "jquery": "^3.2.1",
+    "sass": "^1.0.0-beta.2"
+  }
+}

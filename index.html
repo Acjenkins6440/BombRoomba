@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src='./node_modules/jquery/dist/jquery.js'></script>
+    <script type="text/javascript" src='./index.js'></script>
+    <link
+      href='http://fonts.googleapis.com/css?family=Orbitron|Bubblegum+Sans'
+      rel='stylesheet'
+      type='text/css'
+    >
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+  <div class="selector">
+    <h1>
+        Select Size
+    </h1>
+    <div class='size'>
+
+      <button class="small" id = "button">
+        <h2> Small (9x9)</h2>
+        <h4>10 Mines</h4>
+      </button>
+      <button class='medium' id = "button">
+        <h2> Medium (16x16)</h2>
+        <h4> 40 Mines</h4>
+      </button>
+      <button class='large' id = "button">
+        <h2> Large (16x30)</h2>
+        <h4> 99 Mines </h4>
+      </button>
+    </div>
+  </div>
+  <div class='board'>
+    <div class='navbar'>
+      MinSwepper
+      <button id = 'X'>
+        X
+      </button>
+      <button id = 'i'>
+        i
+      </button>
+    </div>
+    <div class='scorebar'>
+      <div class="score">
+        00
+      </div>
+      <div class = 'face'>
+       <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+      </div>
+      <div class='timer'>
+        00
+      </div>
+    </div>
+    <div class="container">
+    </div>
+  </div>
+</body>
