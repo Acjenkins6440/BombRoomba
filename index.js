@@ -1,7 +1,7 @@
 var box = '';
 var bombs = [];
 var numBombs = 10;
-var clickTile = {'border':'2px dotted black','height':'25px', 'width':'25px'};
+var clickTile = {'border':'1px dotted black','height':'26px', 'width':'26px'};
 var bombpic = 'url("https://d30y9cdsu7xlg0.cloudfront.net/png/54644-200.png")';
 var ur = 0
 var u = 0
@@ -85,15 +85,19 @@ function bindClickHandlers(){
   $(".small").click(function(){
     gridSetup(9,9,0);
     numBombs = 10;
-    bombSetup(9*9)});
+    bombSetup(9*9);
+    $(".face").css('flex','2')});
   $(".medium").click(function(){
     gridSetup(16,16,1);
     numBombs = 40;
-    bombSetup(16*16)});
+    bombSetup(16*16);
+    $(".face").css('flex','5');
+    });
   $(".large").click(function(){
     gridSetup(16,30,2);
     numBombs = 99;
-    bombSetup(16*30);});
+    bombSetup(16*30);
+    $(".face").css('flex','10');});
   $(".size").children().mousedown(function(){
     $(this).css('border', '4px inset grey');
   });
@@ -108,22 +112,22 @@ function gridSetup(y,x,z){
 
   $('.board').show();
   if (z == 0){
-    $('.container').animate(setGrid(250,250),0);
-    $('.board').animate(setGrid(248,300),0);
-    $('.score').animate(setGrid(248,34),0);
-    $('.navbar').animate(setGrid(248,18),0);
+    $('.container').animate(setGrid(252,260),0);
+    $('.board').animate(setGrid(252,300),0);
+    $('.scorebar').animate(setGrid(252,35),0);
+    $('.navbar').animate(setGrid(249,18),0);
   }
   else if (z == 1){
-    $('.container').animate(setGrid(444,444),0);
-    $('.board').animate(setGrid(442,494),0);
-    $('.score').animate(setGrid(442,34),0);
-    $('.navbar').animate(setGrid(440,18),0);
+    $('.container').animate(setGrid(448,450),0);
+    $('.board').animate(setGrid(448,494),0);
+    $('.scorebar').animate(setGrid(448,34),0);
+    $('.navbar').animate(setGrid(445,18),0);
   }
   else{
-    $('.container').animate(setGrid(825,444),0);
-    $('.board').animate(setGrid(825,494),0);
-    $('.score').animate(setGrid(825,34),0);
-    $('.navbar').animate(setGrid(821,18),0);
+    $('.container').animate(setGrid(840,450),0);
+    $('.board').animate(setGrid(840,494),0);
+    $('.scorebar').animate(setGrid(840,34),0);
+    $('.navbar').animate(setGrid(837,18),0);
   }
 
   for (j=1;j<(y*x)+1;j++){
@@ -267,4 +271,4 @@ function resetAndAddNums(){
     }
   });
   ul,u,ur,r,l,lowl,low,lowr = 0;
-}            
+}

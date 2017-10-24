@@ -12,6 +12,7 @@ body{
   background-image:url('https://www.hdwallpapers.in/walls/windows_xp_bliss-wide.jpg');
   background-size:cover;
   z-index:-10;
+  text-align:center;
 }
 .board{
   height: 300px;
@@ -67,6 +68,7 @@ body{
     .score{
       float:left;
       background-color:black;
+      flex:1;
       margin-left:10px;
       border:2px inset grey;
     }
