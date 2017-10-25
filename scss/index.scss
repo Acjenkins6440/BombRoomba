@@ -99,7 +99,10 @@ body{
     }
     .bmb{}
     .box{
-      border:4px outset grey;
+      border-top: 4px outset white;
+      border-left:4px outset white;
+      border-bottom: 4px outset grey;
+      border-right: 4px outset grey;
       width:20px;
       height:20px;
       margin:0px;
