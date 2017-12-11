@@ -7,16 +7,16 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
-$flagPic: "https://d30y9cdsu7xlg0.cloudfront.net/png/1665-200.png";
+$flagPic: "flag.png";
 body{
-  background-image:url('https://www.hdwallpapers.in/walls/windows_xp_bliss-wide.jpg');
+  background-image:url(background.jpg);
   background-size:cover;
   z-index:-10;
   text-align:center;
 }
 .board{
   height: 300px;
-  width: 248px;
+  width: 500px;
   margin: 0 auto;
   position: relative;
   border: 4px double blue;
@@ -47,6 +47,7 @@ body{
     #X{
       background-color:red;
     }
+
   }
   .scorebar{
     background-color:grey;
@@ -63,7 +64,7 @@ body{
       width:26px !important;
       color:red;
       text-align:center;
-
+      font-size: 18px;
     }
     .score{
       float:left;
@@ -84,7 +85,9 @@ body{
       float:left;
       flex:2;
       color:black;
-
+      &:hover{
+        cursor:default;
+      }
     }
   }
   .container{
@@ -92,33 +95,40 @@ body{
     height:235px;
     margin: 0 auto;
     bottom:0;
-    position:absolute;
-    margin-bottom:-2px;
+    position:flex;
     .flag{
-      background-image: url(#{$flagPic})
+      background-image: url(#{$flagpic}) !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
-    .bmb{}
+    .bmb{
+      font-size: 18px;
+      margin-top:2px;
+    }
     .box{
-      border-top: 4px outset white;
-      border-left:4px outset white;
-      border-bottom: 4px outset grey;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      border-bottom:4px outset grey;
       border-right: 4px outset grey;
-      width:20px;
-      height:20px;
+      border-top: 4px outset #D3D3D3;
+      border-left: 4px outset #D3D3D3;
+      width:28px;
+      height:28px;
       margin:0px;
       padding:0px;
       display:block;
       position:relative;
       float:left;
       background-color:grey;
-      background-size: contain;
     }
   }
 }
 .selector{
   width:470px;
   height:380px;
-  background-color:rgba(128,128,128, 0.9);
+
   position:absoulute;
   margin:0 auto;
   h1{

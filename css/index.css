@@ -1,12 +1,12 @@
 body {
-  background-image: url("https://www.hdwallpapers.in/walls/windows_xp_bliss-wide.jpg");
+  background-image: url(background.jpg);
   background-size: cover;
   z-index: -10;
   text-align: center; }
 
 .board {
   height: 300px;
-  width: 248px;
+  width: 500px;
   margin: 0 auto;
   position: relative;
   border: 4px double blue;
@@ -60,7 +60,8 @@ body {
       font-family: Orbitron;
       width: 26px !important;
       color: red;
-      text-align: center; }
+      text-align: center;
+      font-size: 18px; }
     .board .scorebar .score {
       float: left;
       background-color: black;
@@ -77,34 +78,42 @@ body {
       float: left;
       flex: 2;
       color: black; }
+      .board .scorebar .face:hover {
+        cursor: default; }
   .board .container {
     width: 235px;
     height: 235px;
     margin: 0 auto;
     bottom: 0;
-    position: absolute;
-    margin-bottom: -2px; }
+    position: flex; }
     .board .container .flag {
-      background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/1665-200.png); }
+      background-image: url(flag.png) !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    .board .container .bmb {
+      font-size: 18px;
+      margin-top: 2px; }
     .board .container .box {
-      border-top: 4px outset white;
-      border-left: 4px outset white;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
       border-bottom: 4px outset grey;
       border-right: 4px outset grey;
-      width: 20px;
-      height: 20px;
+      border-top: 4px outset #D3D3D3;
+      border-left: 4px outset #D3D3D3;
+      width: 28px;
+      height: 28px;
       margin: 0px;
       padding: 0px;
       display: block;
       position: relative;
       float: left;
-      background-color: grey;
-      background-size: contain; }
+      background-color: grey; }
 
 .selector {
   width: 470px;
   height: 380px;
-  background-color: rgba(128, 128, 128, 0.9);
   position: absoulute;
   margin: 0 auto; }
   .selector h1 {
